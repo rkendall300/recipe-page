@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Young-Serif-Regular';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url('./assets/fonts/outfit/static/Outfit-Regular.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Outfit-SemiBold';
+  src: url('./assets/fonts/outfit/static/Outfit-SemiBold.ttf');
 }
 
-.App-header {
-  background-color: #282c34;
+@font-face {
+  font-family: 'Outfit-Bold';
+  src: url('./assets/fonts/outfit/static/Outfit-Bold.ttf');
+}
+
+main {
+  width: 100%;
   min-height: 100vh;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#backdrop {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3e6d8;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#card {
+  margin: 10vh 0;
+  width: 650px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#fm-image-container {
+  background-image: url('./assets/images/image-omelette.jpeg');
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bold {
+  font-family: 'Outfit-Bold';
+  font-size: 16px;
+  color: #5f574e;
+}
+
+#title {
+  font-family: 'Young-Serif-Regular';
+  font-size: 40px;
+  font-weight: 400;
+  color: #302d2c;
+  margin: 25px 0 15px 0;
+}
+
+#title-description {
+  font-family: 'Outfit-Regular';
+  font-size: 16px;
+  color: #302d2c;
+  margin: 0 0 30px 0;
+  padding: 0;
+  border: 0;
+}
+
+#preptime-section {
+  background-color: #fff5fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#preptime {
+  color: #7b284f;
+  font-family: 'Outfit-Regular';
+  font-size: 18px;
+  margin: 10px;
+}
+
+#preptime-list {
+  list-style-position: outside;
+  margin: 0 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.prep {
+  font-family: 'Outfit-Regular';
+  font-size: 16px;
+  color: #5f574e;
+  margin: 10px;
+  padding-left: 15px;
+}
+
+.prep::marker, .ingredients::marker, .instructions::marker {
+  font-family: 'Outfit-Bold';
+  color: #7b284f;
+}
+
+.heading {
+  font-size: 28px;
+  font-family: 'Young-Serif-Regular';
+  font-weight: 400;
+  color: #854632;
+  margin: 25px 0;
+}
+
+#ingredients-list {
+  list-style-position: outside;
+  margin: 0 0 30px 20px;
+  padding: 0;
+  border: 0;
+}
+
+.ingredients {
+  font-family: 'Outfit-Regular';
+  font-size: 16px;
+  color: #5f574e;
+  margin: 10px;
+  padding-left: 15px;
+}
+
+#ingredients-section {
+  border-bottom: 1px solid #e4ded8;
+}
+
+#instructions-list {
+  list-style-position: outside;
+  margin: 0 0 30px 20px;
+  padding: 0;
+  border: 0;
+}
+
+.instructions {
+  font-family: 'Outfit-Regular';
+  font-size: 16px;
+  color: #5f574e;
+  margin: 10px;
+  padding-left: 15px;
+  line-height: 25px;
+}
+
+#instructions-section {
+  border-bottom: 1px solid #e4ded8;
+}
+
+#table-description {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Outfit-Regular';
+  color: #5f574e;
+}
+
+table {
+  margin: 20px 0;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  font-size: 16px;
+  font-family: 'Outfit-Regular';
+  color: #5f574e;
+  line-height: 50px;
+}
+
+.table-left {
+  padding: 0 0 0 30px;
+  max-width: 325px;
+}
+
+.table-bold {
+  font-family: 'Outfit-Bold';
+  color: #7b284f;
+  padding: 0 30px 0 0;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid #e4ded8;
+}
+
+@media screen and (max-width: 500px) {
+  #card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  #fm-image-container {
+    height: 175px;
+    border-radius: 0;
+  }
+
+  #info {
+    padding: 2rem;
+  }
+
+  #title {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 0;
+  }
+
+  #title-description {
+    margin: 25px 0;
+  }
+
+  .heading {
+    margin: 20px 0;
+  }
+
+  .instructions {
+    line-height: 20px;
+  }
+
+  table {
+    margin: 15px 0 0 0;
+  }
+
+  .table-bold {
+    padding: 0 20px 0 0;
   }
 }
